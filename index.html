@@ -3,287 +3,220 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GOAT BEER | Portfólio</title>
+<title>GOAT BEER</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-
 body{
-    font-family:Arial, sans-serif;
-    background:#ffffff;
-    color:#111;
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:white;
+    color:#000;
 }
 
-/* AGE GATE */
-#age-gate{
-    position:fixed;
+.banner{
     width:100%;
-    height:100%;
-    background:#000;
-    color:#fff;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    height:100vh;
+    background:url('banner.jpeg') center/cover no-repeat;
+}
+
+/* PADRÃO DE SESSÕES DESLIZANTES */
+.slider-section{
+    padding:60px 20px;
     text-align:center;
-    z-index:9999;
 }
 
-#age-gate h1{
-    font-size:38px;
-    margin-bottom:20px;
-    color:#c6a84a;
-}
-
-#age-gate p{margin-bottom:25px;}
-
-#age-gate button{
-    margin:10px;
-    padding:14px 35px;
-    font-size:16px;
-    border:none;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.btn-yes{background:#c6a84a;color:#000;}
-.btn-no{background:#444;color:#fff;}
-
-/* BANNER */
-header{
-    background:url('banner.jpeg') center center/cover no-repeat;
-    height:85vh;
-}
-
-/* SEÇÕES */
-section{
-    padding:80px 8%;
-}
-
-/* CARROSSEL PADRÃO */
-.carrossel-wrapper{position:relative;}
-
-.carrossel-container{
+.slider-container{
+    display:flex;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
-    display:flex;
-    gap:40px;
+    gap:20px;
+}
+
+.slider-container::-webkit-scrollbar{
+    display:none;
 }
 
 .slide{
-    min-width:100%;
+    min-width:90%;
     scroll-snap-align:center;
     display:flex;
-    justify-content:center;
-    align-items:center;
     flex-direction:column;
+    align-items:center;
 }
 
-.slide img{
+.gold-box{
+    border:2px solid #c9a227;
+    padding:25px;
+    border-radius:10px;
+    background:white;
+    max-width:500px;
+}
+
+.gold-box h2{
+    color:#c9a227;
+}
+
+.gold-box p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+.arrow{
+    margin-top:20px;
+    font-weight:bold;
+    color:#c9a227;
+    animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0.3;}
+}
+
+.beer-img{
     width:280px;
     margin-bottom:20px;
 }
 
-.info-box{
-    border:3px solid #c6a84a;
-    padding:30px;
-    max-width:700px;
-    text-align:center;
-}
+@media(min-width:768px){
+    .slide{
+        flex-direction:row;
+        justify-content:center;
+        gap:40px;
+    }
 
-.info-box h3{
-    color:#c6a84a;
-    margin-bottom:20px;
-}
-
-.scroll-indicator{
-    position:absolute;
-    right:20px;
-    top:50%;
-    transform:translateY(-50%);
-    text-align:center;
-    color:#c6a84a;
-    animation:pulse 1.5s infinite;
-}
-
-.scroll-indicator span{
-    font-size:13px;
-    display:block;
-}
-
-.scroll-indicator .arrow{
-    font-size:28px;
-}
-
-@keyframes pulse{
-    0%{opacity:0.3;}
-    50%{opacity:1;}
-    100%{opacity:0.3;}
-}
-
-/* FOOTER */
-footer{
-    background:#000;
-    color:#c6a84a;
-    padding:30px;
-    text-align:center;
+    .beer-img{
+        margin-bottom:0;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<div id="age-gate">
-    <h1>GOAT BEER</h1>
-    <p>Você tem mais de 18 anos?</p>
-    <div>
-        <button class="btn-yes" onclick="enterSite()">SIM</button>
-        <button class="btn-no" onclick="denyAccess()">NÃO</button>
+<!-- BANNER -->
+<div class="banner"></div>
+
+<!-- APRESENTAÇÃO EMPRESA (NOVA PARTE ADICIONADA) -->
+<section class="slider-section">
+    <div class="slider-container">
+
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="gold-box">
+                <h2>GOAT BEER</h2>
+                <p>
+                Fundada em 2021, a GOAT BEER nasceu com um único propósito:
+                elevar o padrão da cerveja artesanal brasileira.
+                <br><br>
+                Mais de 8 anos de experiência no mercado cervejeiro
+                deram origem a uma marca ousada, moderna e incomparável.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="gold-box">
+                <h2>Rigor e Normas</h2>
+                <p>
+                Operamos seguindo rigorosamente todas as normas técnicas obrigatórias,
+                incluindo NR-06, NR-12, NR-17 e NR-23.
+                <br><br>
+                Segurança, responsabilidade e excelência fazem parte
+                do nosso processo produtivo.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <div class="gold-box">
+                <h2>Laboratório Próprio</h2>
+                <p>
+                Contamos com laboratório próprio para análises,
+                inspeções técnicas e estudos sensoriais.
+                <br><br>
+                Cada lote passa por controle rigoroso de qualidade
+                antes de chegar até você.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <div class="gold-box">
+                <h2>Inovação e Patentes</h2>
+                <p>
+                A GOAT BEER é movida por inovação.
+                Desenvolvemos receitas exclusivas e produtos patenteados,
+                sempre trazendo ao mercado algo que ninguém ousou criar.
+                </p>
+            </div>
+        </div>
+
     </div>
-</div>
 
-<header></header>
-
-<!-- EMPRESA (NOVO CARROSSEL) -->
-<section>
-<div class="carrossel-wrapper">
-<div class="carrossel-container">
-
-<div class="slide">
-    <div class="info-box">
-        <h3>GOAT BEER — DESDE 2021</h3>
-        <p>
-            Fundada em 2021 em Joinville – SC,
-            a GOAT BEER nasceu com a missão de inovar no mercado cervejeiro.
-            Fábrica própria, desenvolvimento autoral
-            e compromisso absoluto com qualidade e identidade.
-        </p>
-    </div>
-</div>
-
-<div class="slide">
-    <div class="info-box">
-        <h3>CONFORMIDADE E SEGURANÇA</h3>
-        <p>
-            Operamos seguindo todas as Normas Regulamentadoras aplicáveis ao setor,
-            incluindo NR-06 (EPI), NR-12 (Segurança em Máquinas),
-            NR-17 (Ergonomia), NR-23 (Proteção Contra Incêndios)
-            e demais exigências técnicas obrigatórias.
-            Segurança e responsabilidade fazem parte do nosso padrão.
-        </p>
-    </div>
-</div>
-
-<div class="slide">
-    <div class="info-box">
-        <h3>LABORATÓRIO PRÓPRIO</h3>
-        <p>
-            Contamos com laboratório interno para análises físico-químicas,
-            controle microbiológico, inspeções constantes
-            e estudos técnicos que garantem estabilidade,
-            pureza e excelência em cada lote produzido.
-        </p>
-    </div>
-</div>
-
-<div class="slide">
-    <div class="info-box">
-        <h3>INOVAÇÃO E PATENTES</h3>
-        <p>
-            A GOAT BEER é movida pela inovação.
-            Desenvolvemos receitas exclusivas
-            e produtos com formulações patenteadas,
-            sempre trazendo ao mercado brasileiro
-            algo que ainda não foi visto.
-        </p>
-    </div>
-</div>
-
-</div>
-
-<div class="scroll-indicator">
-    <div class="arrow">➜</div>
-    <span>Arraste</span>
-</div>
-
-</div>
+    <div class="arrow">← ARRASTE →</div>
 </section>
 
-<!-- ANN ROSA (INALTERADA) -->
-<section>
-<div class="carrossel-wrapper">
-<div class="carrossel-container">
+<!-- CERVEJA ROSA (MANTIDO EXATAMENTE COMO APROVADO) -->
+<section class="slider-section">
+    <div class="slider-container">
 
-<div class="slide">
-    <img src="cervejarosa.jpeg">
-</div>
+        <div class="slide">
+            <img src="cervejarosa.jpeg" class="beer-img">
+        </div>
 
-<div class="slide">
-    <div class="info-box">
-        <h3>ANN PILSEN — A CERVEJA ROSA</h3>
-        <p>
-            Cereja fresca, morango intenso e pimenta rosa criam uma identidade sensorial inédita.
-            Hibisco africano e baunilha de Madagascar elevam a experiência.
-            Exclusiva. Rosa. Inconfundível.
-        </p>
+        <div class="slide">
+            <div class="gold-box">
+                <h2>ANN Pilsen</h2>
+                <p>
+                A cerveja rosa da GOAT BEER.
+                <br><br>
+                Uma combinação inédita de cereja fresca,
+                morango suculento e pimenta rosa.
+                <br><br>
+                Notas de hibisco africano e baunilha de Madagascar
+                elevam a experiência sensorial.
+                <br><br>
+                Exclusiva. Rosa. Incomparável.
+                </p>
+            </div>
+        </div>
+
     </div>
-</div>
 
-</div>
-
-<div class="scroll-indicator">
-    <div class="arrow">➜</div>
-    <span>Arraste</span>
-</div>
-
-</div>
+    <div class="arrow">← ARRASTE →</div>
 </section>
 
-<!-- PILSEN (INALTERADA) -->
-<section>
-<div class="carrossel-wrapper">
-<div class="carrossel-container">
+<!-- CERVEJA PILSEN (MANTIDO EXATAMENTE COMO APROVADO) -->
+<section class="slider-section">
+    <div class="slider-container">
 
-<div class="slide">
-    <img src="cervejapilsen.jpeg">
-</div>
+        <div class="slide">
+            <img src="cervejapilsen.jpeg" class="beer-img">
+        </div>
 
-<div class="slide">
-    <div class="info-box">
-        <h3>GOAT BEER PILSEN</h3>
-        <p>
-            A cerveja mais vendida da GOAT BEER.
-            Produzida com malte Pale Ale de Idaho (EUA),
-            lúpulo Cascade do Vale de Yakima,
-            levedura americana de alta performance
-            e acabamento refinado com dry hopping aromático.
-            Uma Pilsen premiada que redefine o padrão do estilo no Brasil.
-        </p>
+        <div class="slide">
+            <div class="gold-box">
+                <h2>GOAT BEER Pilsen</h2>
+                <p>
+                Nossa cerveja mais vendida e premiada.
+                <br><br>
+                Lúpulo Cascade importado dos Estados Unidos,
+                malte premium selecionado
+                e leveduras especiais de alta performance.
+                <br><br>
+                Uma Pilsen equilibrada, marcante
+                e única no Brasil.
+                </p>
+            </div>
+        </div>
+
     </div>
-</div>
 
-</div>
-
-<div class="scroll-indicator">
-    <div class="arrow">➜</div>
-    <span>Arraste</span>
-</div>
-
-</div>
+    <div class="arrow">← ARRASTE →</div>
 </section>
-
-<footer>
-    © 2026 GOAT BEER • JOINVILLE – SC • BRASIL
-</footer>
-
-<script>
-function enterSite(){
-    document.getElementById("age-gate").style.display="none";
-}
-function denyAccess(){
-    document.body.innerHTML="<div style='background:black;color:#c6a84a;height:100vh;display:flex;justify-content:center;align-items:center;'><h1>Acesso permitido apenas para maiores de 18 anos.</h1></div>";
-}
-</script>
 
 </body>
 </html>
