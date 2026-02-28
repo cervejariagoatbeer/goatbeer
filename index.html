@@ -13,7 +13,7 @@
 }
 
 body{
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background:#ffffff;
     color:#111;
 }
@@ -34,10 +34,10 @@ body{
 }
 
 #age-gate h1{
-    font-size:48px;
+    font-size:38px;
     margin-bottom:20px;
     color:#c6a84a;
-    letter-spacing:3px;
+    letter-spacing:2px;
 }
 
 #age-gate p{
@@ -47,11 +47,10 @@ body{
 
 #age-gate button{
     margin:10px;
-    padding:14px 40px;
+    padding:14px 35px;
     font-size:16px;
     border:none;
     cursor:pointer;
-    letter-spacing:2px;
 }
 
 .btn-yes{
@@ -64,65 +63,76 @@ body{
     color:#fff;
 }
 
-/* ===== BANNER ===== */
+/* ===== BANNER LIMPO ===== */
 header{
     background:url('banner.jpeg') center center/cover no-repeat;
-    height:100vh;
-}
-
-/* ===== SEÇÕES ===== */
-section{
-    padding:110px 12%;
-}
-
-h2{
-    font-size:40px;
-    text-align:center;
-    margin-bottom:60px;
-    color:#c6a84a;
-    letter-spacing:2px;
+    height:85vh;
 }
 
 /* ===== HISTÓRIA ===== */
+section{
+    padding:70px 8%;
+}
+
 .historia{
     text-align:center;
-    max-width:900px;
+    max-width:800px;
     margin:auto;
 }
 
+.historia h2{
+    color:#c6a84a;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
 .historia p{
-    font-size:18px;
-    line-height:1.9;
+    line-height:1.8;
+    font-size:16px;
     color:#333;
 }
 
-/* ===== PRODUTO ===== */
-.produto{
+/* ===== CARROSSEL ===== */
+.carrossel-container{
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
     display:flex;
-    align-items:center;
+    gap:40px;
+    padding-bottom:20px;
+}
+
+.slide{
+    min-width:100%;
+    scroll-snap-align:center;
+    display:flex;
     justify-content:center;
-    gap:100px;
-    flex-wrap:wrap;
+    align-items:center;
+    flex-direction:column;
 }
 
-.produto img{
-    width:360px;
+/* Slide imagem */
+.slide img{
+    width:280px;
+    margin-bottom:20px;
 }
 
-.produto-info{
+/* Slide informação */
+.info-box{
+    border:3px solid #c6a84a;
+    padding:30px;
     max-width:600px;
+    text-align:center;
 }
 
-.produto-info h3{
-    font-size:34px;
-    margin-bottom:30px;
+.info-box h3{
     color:#c6a84a;
-    letter-spacing:1px;
+    margin-bottom:20px;
+    font-size:22px;
 }
 
-.produto-info p{
-    font-size:18px;
-    line-height:1.9;
+.info-box p{
+    font-size:15px;
+    line-height:1.7;
     color:#333;
 }
 
@@ -130,10 +140,9 @@ h2{
 footer{
     background:#000;
     color:#c6a84a;
-    padding:40px;
+    padding:30px;
     text-align:center;
-    font-size:14px;
-    letter-spacing:1px;
+    font-size:13px;
 }
 </style>
 </head>
@@ -150,52 +159,50 @@ footer{
     </div>
 </div>
 
-<!-- BANNER LIMPO -->
+<!-- BANNER -->
 <header></header>
 
 <!-- HISTÓRIA -->
-<section>
-    <h2>UMA MARCA QUE NASCEU PARA DOMINAR</h2>
-    <div class="historia">
-        <p>
-            A GOAT BEER nasceu em 2021 com uma visão clara:
-            criar algo que o mercado ainda não tinha coragem de fazer.
-            Com fábrica própria em Joinville, Santa Catarina,
-            desenvolvemos receitas autorais, técnicas exclusivas
-            e produtos que rompem padrões.
-            Não somos apenas mais uma cervejaria.
-            Somos movimento. Somos inovação.
-            Somos a evolução do sabor.
-        </p>
-    </div>
+<section class="historia">
+    <h2>INOVAÇÃO QUE NASCEU EM 2021</h2>
+    <p>
+        A GOAT BEER nasceu em Joinville – Santa Catarina com um propósito:
+        criar cervejas que o mercado ainda não ousou produzir.
+        Fábrica própria, desenvolvimento autoral e uma visão clara —
+        entregar exclusividade, identidade e impacto em cada rótulo.
+    </p>
 </section>
 
-<!-- ANN PILSEN -->
+<!-- ANN PILSEN CARROSSEL -->
 <section>
-    <h2>INOVAÇÃO QUE DESAFIA O MERCADO</h2>
+    <div class="carrossel-container">
 
-    <div class="produto">
-        <img src="cervejarosa.jpeg" alt="ANN Pilsen 1,5L">
-
-        <div class="produto-info">
-            <h3>ANN PILSEN — EXCLUSIVA. ROSA. INESQUECÍVEL.</h3>
-            <p>
-                A ANN Pilsen foi criada para quem não aceita o comum.
-                Uma composição patenteada que une cereja fresca,
-                morango intenso e o toque sofisticado da pimenta rosa.
-                Notas delicadas de hibisco africano e a elegância da
-                baunilha de Madagascar elevam cada gole a outro nível.
-                Cada detalhe foi pensado para surpreender.
-                Cada ingrediente foi escolhido para impressionar.
-                Não é apenas uma cerveja.
-                É presença. É identidade. É desejo engarrafado.
-            </p>
+        <!-- SLIDE 1 - IMAGEM -->
+        <div class="slide">
+            <img src="cervejarosa.jpeg" alt="ANN Pilsen Rosa">
         </div>
+
+        <!-- SLIDE 2 - INFORMAÇÕES -->
+        <div class="slide">
+            <div class="info-box">
+                <h3>ANN PILSEN — A CERVEJA ROSA</h3>
+                <p>
+                    Uma criação patenteada e ousada.
+                    Cereja fresca, morango intenso e o toque refinado
+                    da pimenta rosa criam uma identidade única.
+                    Notas de hibisco africano e baunilha de Madagascar
+                    elevam a experiência a outro nível.
+                    Não é apenas uma cerveja.
+                    É um manifesto líquido de exclusividade.
+                </p>
+            </div>
+        </div>
+
     </div>
 </section>
 
 <footer>
-    © 2026 GOAT BEER • JOINVILLE – SANTA CATARINA • BRASIL
+    © 2026 GOAT BEER • JOINVILLE – SC • BRASIL
 </footer>
 
 <script>
