@@ -6,11 +6,16 @@
 <title>GOAT BEER | Excelência em Cada Gole</title>
 
 <style>
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
+    background-color: #0f0f0f;
+    color: #ffffff;
 }
 
 /* ===== AGE GATE ===== */
@@ -19,6 +24,7 @@ body {
     width: 100%;
     height: 100%;
     background: #000;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,16 +34,23 @@ body {
 }
 
 #age-gate h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 10px;
+    color: #c9a227;
+}
+
+#age-gate p {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
 
 #age-gate button {
     margin: 10px;
-    padding: 12px 30px;
+    padding: 12px 35px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .btn-yes {
@@ -45,39 +58,50 @@ body {
     color: #000;
 }
 
+.btn-yes:hover {
+    background: #e0b83f;
+}
+
 .btn-no {
-    background: #444;
+    background: #333;
     color: #fff;
 }
 
-/* ===== HERO BANNER ===== */
+.btn-no:hover {
+    background: #555;
+}
+
+/* ===== HERO ===== */
 header {
-    background: url('banner.jpg') center/cover no-repeat;
+    background: url('banner.jpeg') center center/cover no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
-.hero-content {
+.overlay {
     background: rgba(0,0,0,0.65);
-    padding: 40px;
+    padding: 50px;
     border-radius: 10px;
 }
 
-.hero-content h1 {
-    font-size: 50px;
-    margin-bottom: 10px;
+.overlay h1 {
+    font-size: 55px;
+    color: #c9a227;
+    margin-bottom: 15px;
 }
 
-.hero-content p {
+.overlay p {
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
 /* ===== SECTIONS ===== */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
@@ -86,20 +110,36 @@ section {
 }
 
 .section-light {
-    background: #1a1a1a;
+    background: #141414;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+section h2 {
+    font-size: 36px;
     color: #c9a227;
+    margin-bottom: 25px;
+}
+
+section p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #000;
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #888;
 }
 </style>
 </head>
 
 <body>
 
-<!-- AGE VERIFICATION -->
+<!-- AGE GATE -->
 <div id="age-gate">
     <h1>GOAT BEER</h1>
     <p>Você tem mais de 18 anos?</p>
@@ -111,10 +151,10 @@ h2 {
 
 <!-- HERO -->
 <header>
-    <div class="hero-content">
+    <div class="overlay">
         <h1>GOAT BEER</h1>
         <p>Excelência em cada gole.</p>
-        <p>Cervejas exclusivas • Produção própria • Padrão premium</p>
+        <p>Cervejas exclusivas • Produção própria • Padrão de qualidade rigoroso</p>
     </div>
 </header>
 
@@ -122,18 +162,20 @@ h2 {
 <section class="section-light">
     <h2>Sobre a GOAT BEER</h2>
     <p>
-        A GOAT BEER nasceu com um propósito claro: criar cervejas que vão além do comum.
-        Unimos inovação, tecnologia e excelência em cada etapa do processo produtivo.
+        A GOAT BEER nasceu com a missão de elevar o padrão da cerveja nacional.
+        Trabalhamos com produção própria, controle técnico rigoroso e inovação constante,
+        criando rótulos que se destacam pela identidade e exclusividade.
     </p>
 </section>
 
 <!-- CERVEJA ROSA -->
 <section class="section-dark">
-    <h2>A Revolucionária Cerveja Rosa</h2>
+    <h2>A Cerveja Rosa Patenteada</h2>
     <p>
-        Um conceito exclusivo e patenteado que redefine o mercado.
-        A combinação única de ingredientes selecionados criou uma cerveja
-        sofisticada, surpreendente e reconhecida por sua identidade singular.
+        Um conceito inovador e exclusivo que redefiniu o mercado.
+        A combinação cuidadosamente desenvolvida resultou em uma cerveja única,
+        sofisticada e de identidade inconfundível.
+        Um produto que representa ousadia, tecnologia e excelência.
     </p>
 </section>
 
@@ -141,11 +183,17 @@ h2 {
 <section class="section-light">
     <h2>Estrutura Industrial</h2>
     <p>
-        Operamos com produção própria, laboratório interno para controle rigoroso de qualidade
-        e seguimos as Normas Regulamentadoras (NRs) obrigatórias do setor.
-        Nossa capacidade produtiva garante escala, segurança e padronização.
+        Nossa estrutura conta com laboratório próprio para controle de qualidade,
+        equipamentos modernos e conformidade com as Normas Regulamentadoras (NRs)
+        aplicáveis ao setor de bebidas.
+        Capacidade produtiva preparada para atender diferentes escalas com segurança
+        e padronização.
     </p>
 </section>
+
+<footer>
+    © 2026 GOAT BEER • Todos os direitos reservados
+</footer>
 
 <script>
 function enterSite() {
