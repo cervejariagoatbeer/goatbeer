@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GOAT BEER | Portfólio Oficial</title>
+<title>GOAT BEER | Portfólio</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -34,6 +34,8 @@ body{
     margin-bottom:20px;
     color:#c6a84a;
 }
+
+#age-gate p{margin-bottom:25px;}
 
 #age-gate button{
     margin:10px;
@@ -68,16 +70,14 @@ section{
 .historia h2{
     color:#c6a84a;
     margin-bottom:30px;
-    font-size:28px;
 }
 
 .historia p{
     line-height:1.8;
-    font-size:16px;
     color:#333;
 }
 
-/* CARROSSEL ANN */
+/* CARROSSEL */
 .carrossel-wrapper{position:relative;}
 
 .carrossel-container{
@@ -98,6 +98,7 @@ section{
 
 .slide img{
     width:280px;
+    margin-bottom:20px;
 }
 
 .info-box{
@@ -117,37 +118,24 @@ section{
     right:20px;
     top:50%;
     transform:translateY(-50%);
+    text-align:center;
     color:#c6a84a;
     animation:pulse 1.5s infinite;
+}
+
+.scroll-indicator span{
+    font-size:13px;
+    display:block;
+}
+
+.scroll-indicator .arrow{
+    font-size:28px;
 }
 
 @keyframes pulse{
     0%{opacity:0.3;}
     50%{opacity:1;}
     100%{opacity:0.3;}
-}
-
-/* PILSEN */
-.produto{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:60px;
-    flex-wrap:wrap;
-}
-
-.produto img{
-    width:300px;
-}
-
-.badge{
-    display:inline-block;
-    background:#c6a84a;
-    color:#000;
-    padding:6px 12px;
-    font-size:12px;
-    margin-right:8px;
-    margin-bottom:15px;
 }
 
 /* FOOTER */
@@ -179,28 +167,26 @@ footer{
     <p>
         A GOAT BEER nasceu em Joinville – Santa Catarina com um propósito:
         criar cervejas que o mercado ainda não ousou produzir.
-        Com fábrica própria, laboratório interno e controle rigoroso,
-        desenvolvemos rótulos autorais que elevam o padrão da cerveja nacional.
+        Fábrica própria, laboratório interno e controle rigoroso
+        garantem excelência em cada rótulo.
     </p>
 </section>
 
 <!-- ANN ROSA -->
 <section>
 <div class="carrossel-wrapper">
-<div class="carrossel-container" id="carrossel">
+<div class="carrossel-container">
 
 <div class="slide">
-    <img src="cervejarosa.jpeg" alt="ANN Pilsen Rosa">
+    <img src="cervejarosa.jpeg">
 </div>
 
 <div class="slide">
     <div class="info-box">
         <h3>ANN PILSEN — A CERVEJA ROSA</h3>
         <p>
-            Cereja fresca, morango intenso e pimenta rosa
-            criam uma identidade sensorial inédita.
-            Hibisco africano e baunilha de Madagascar
-            transformam cada gole em uma experiência memorável.
+            Cereja fresca, morango intenso e pimenta rosa criam uma identidade sensorial inédita.
+            Hibisco africano e baunilha de Madagascar elevam a experiência.
             Exclusiva. Rosa. Inconfundível.
         </p>
     </div>
@@ -208,35 +194,42 @@ footer{
 
 </div>
 
-<div class="scroll-indicator">➜</div>
+<div class="scroll-indicator">
+    <div class="arrow">➜</div>
+    <span>Arraste</span>
+</div>
+
 </div>
 </section>
 
-<!-- PILSEN MAIS VENDIDA -->
+<!-- PILSEN MESMO PADRÃO -->
 <section>
-<div class="produto">
+<div class="carrossel-wrapper">
+<div class="carrossel-container">
 
-<img src="cervejapilsen.jpeg" alt="GOAT BEER Pilsen">
+<div class="slide">
+    <img src="cervejapilsen.jpeg">
+</div>
 
-<div class="info-box">
-    <h3>GOAT BEER PILSEN</h3>
+<div class="slide">
+    <div class="info-box">
+        <h3>GOAT BEER PILSEN</h3>
+        <p>
+            A cerveja mais vendida da GOAT BEER.
+            Produzida com malte Pale Ale de Idaho (EUA),
+            lúpulo Cascade do Vale de Yakima,
+            levedura americana de alta performance
+            e acabamento refinado com dry hopping aromático.
+            Uma Pilsen premiada que redefine o padrão do estilo no Brasil.
+        </p>
+    </div>
+</div>
 
-    <div class="badge">MAIS VENDIDA</div>
-    <div class="badge">CERVEJA PREMIADA</div>
+</div>
 
-    <p>
-        Produzida com malte Pale Ale importado de Idaho (EUA),
-        lúpulo Cascade do Vale de Yakima,
-        levedura americana de alta performance
-        e finalização refinada com dry hopping aromático.
-    </p>
-
-    <p>
-        Cristalina, equilibrada e extremamente refrescante,
-        é a interpretação premium do estilo mais consumido do mundo —
-        elevada ao padrão GOAT.
-    </p>
-
+<div class="scroll-indicator">
+    <div class="arrow">➜</div>
+    <span>Arraste</span>
 </div>
 
 </div>
