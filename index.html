@@ -18,7 +18,7 @@ body{
     color:#111;
 }
 
-/* ===== AGE GATE ===== */
+/* AGE GATE */
 #age-gate{
     position:fixed;
     width:100%;
@@ -63,13 +63,13 @@ body{
     color:#fff;
 }
 
-/* ===== BANNER LIMPO ===== */
+/* BANNER */
 header{
     background:url('banner.jpeg') center center/cover no-repeat;
     height:85vh;
 }
 
-/* ===== HISTÓRIA ===== */
+/* HISTÓRIA */
 section{
     padding:70px 8%;
 }
@@ -92,7 +92,11 @@ section{
     color:#333;
 }
 
-/* ===== CARROSSEL ===== */
+/* CARROSSEL */
+.carrossel-wrapper{
+    position:relative;
+}
+
 .carrossel-container{
     overflow-x:auto;
     scroll-snap-type:x mandatory;
@@ -110,13 +114,13 @@ section{
     flex-direction:column;
 }
 
-/* Slide imagem */
+/* Imagem */
 .slide img{
     width:280px;
     margin-bottom:20px;
 }
 
-/* Slide informação */
+/* Info */
 .info-box{
     border:3px solid #c6a84a;
     padding:30px;
@@ -136,7 +140,33 @@ section{
     color:#333;
 }
 
-/* ===== FOOTER ===== */
+/* SETA INDICATIVA */
+.scroll-indicator{
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+    text-align:center;
+    color:#c6a84a;
+    animation:pulse 1.5s infinite;
+}
+
+.scroll-indicator span{
+    font-size:13px;
+    display:block;
+}
+
+.scroll-indicator .arrow{
+    font-size:28px;
+}
+
+@keyframes pulse{
+    0%{opacity:0.3;}
+    50%{opacity:1;}
+    100%{opacity:0.3;}
+}
+
+/* FOOTER */
 footer{
     background:#000;
     color:#c6a84a;
@@ -149,7 +179,6 @@ footer{
 
 <body>
 
-<!-- AGE GATE -->
 <div id="age-gate">
     <h1>GOAT BEER</h1>
     <p>Você tem mais de 18 anos?</p>
@@ -159,10 +188,8 @@ footer{
     </div>
 </div>
 
-<!-- BANNER -->
 <header></header>
 
-<!-- HISTÓRIA -->
 <section class="historia">
     <h2>INOVAÇÃO QUE NASCEU EM 2021</h2>
     <p>
@@ -173,31 +200,34 @@ footer{
     </p>
 </section>
 
-<!-- ANN PILSEN CARROSSEL -->
 <section>
-    <div class="carrossel-container">
+    <div class="carrossel-wrapper">
+        <div class="carrossel-container" id="carrossel">
 
-        <!-- SLIDE 1 - IMAGEM -->
-        <div class="slide">
-            <img src="cervejarosa.jpeg" alt="ANN Pilsen Rosa">
-        </div>
-
-        <!-- SLIDE 2 - INFORMAÇÕES -->
-        <div class="slide">
-            <div class="info-box">
-                <h3>ANN PILSEN — A CERVEJA ROSA</h3>
-                <p>
-                    Uma criação patenteada e ousada.
-                    Cereja fresca, morango intenso e o toque refinado
-                    da pimenta rosa criam uma identidade única.
-                    Notas de hibisco africano e baunilha de Madagascar
-                    elevam a experiência a outro nível.
-                    Não é apenas uma cerveja.
-                    É um manifesto líquido de exclusividade.
-                </p>
+            <div class="slide">
+                <img src="cervejarosa.jpeg" alt="ANN Pilsen Rosa">
             </div>
+
+            <div class="slide">
+                <div class="info-box">
+                    <h3>ANN PILSEN — A CERVEJA ROSA</h3>
+                    <p>
+                        Uma criação patenteada e ousada.
+                        Cereja fresca, morango intenso e pimenta rosa
+                        constroem uma identidade sensorial incomparável.
+                        Hibisco africano e baunilha de Madagascar
+                        elevam cada gole a um novo padrão de sofisticação.
+                        Exclusiva. Rosa. Inconfundível.
+                    </p>
+                </div>
+            </div>
+
         </div>
 
+        <div class="scroll-indicator" id="indicator">
+            <div class="arrow">➜</div>
+            <span>Arraste</span>
+        </div>
     </div>
 </section>
 
@@ -213,6 +243,15 @@ function enterSite(){
 function denyAccess(){
     document.body.innerHTML="<div style='background:black;color:#c6a84a;height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;'><h1>Acesso permitido apenas para maiores de 18 anos.</h1></div>";
 }
+
+const carrossel = document.getElementById("carrossel");
+const indicator = document.getElementById("indicator");
+
+carrossel.addEventListener("scroll", () => {
+    if(carrossel.scrollLeft > 50){
+        indicator.style.display = "none";
+    }
+});
 </script>
 
 </body>
