@@ -3,134 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GOAT BEER | Inovação no Mercado Cervejeiro</title>
+<title>GOAT BEER | ANN Pilsen</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
+body{
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #222;
+    background:#ffffff;
+    color:#222;
 }
 
 /* ===== AGE GATE ===== */
-#age-gate {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 9999;
+#age-gate{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background:#000;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    z-index:9999;
 }
 
-#age-gate h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-    color: #c9a227;
+#age-gate h1{
+    font-size:42px;
+    margin-bottom:15px;
+    color:#e91e63;
 }
 
-#age-gate p {
-    margin-bottom: 20px;
-    font-size: 18px;
+#age-gate p{
+    margin-bottom:20px;
+    font-size:18px;
 }
 
-#age-gate button {
-    margin: 10px;
-    padding: 12px 35px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+#age-gate button{
+    margin:10px;
+    padding:12px 35px;
+    font-size:16px;
+    border:none;
+    cursor:pointer;
 }
 
-.btn-yes {
-    background: #c9a227;
-    color: #000;
+.btn-yes{
+    background:#e91e63;
+    color:#fff;
 }
 
-.btn-no {
-    background: #333;
-    color: #fff;
+.btn-no{
+    background:#444;
+    color:#fff;
 }
 
-/* ===== BANNER LIMPO ===== */
-header {
-    background: url('banner.jpeg') center center/cover no-repeat;
-    height: 100vh;
+/* ===== BANNER ===== */
+header{
+    background:url('banner.jpeg') center center/cover no-repeat;
+    height:100vh;
 }
 
-/* ===== SEÇÕES ===== */
-section {
-    padding: 100px 10%;
+/* ===== SEÇÃO PRODUTO ===== */
+section{
+    padding:100px 10%;
 }
 
-.section-light {
-    background: #ffffff;
+h2{
+    font-size:38px;
+    text-align:center;
+    margin-bottom:60px;
 }
 
-.section-gray {
-    background: #f7f7f7;
+.produto{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+    flex-wrap:wrap;
 }
 
-h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    text-align: center;
+.produto img{
+    width:350px;
 }
 
-/* ===== HISTÓRIA ===== */
-.historia p {
-    max-width: 900px;
-    margin: auto;
-    font-size: 18px;
-    line-height: 1.8;
-    text-align: center;
+.produto-info{
+    max-width:550px;
 }
 
-/* ===== PRODUTO ===== */
-.produto {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
+.produto-info h3{
+    font-size:32px;
+    margin-bottom:25px;
+    color:#e91e63;
 }
 
-.produto img {
-    width: 320px;
-}
-
-.produto-info {
-    max-width: 500px;
-}
-
-.produto-info h3 {
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.produto-info p {
-    font-size: 16px;
-    line-height: 1.7;
-    color: #555;
+.produto-info p{
+    font-size:17px;
+    line-height:1.8;
+    color:#444;
 }
 
 /* ===== FOOTER ===== */
-footer {
-    background: #111;
-    color: #fff;
-    padding: 30px;
-    text-align: center;
-    font-size: 14px;
+footer{
+    background:#111;
+    color:#fff;
+    padding:30px;
+    text-align:center;
+    font-size:14px;
 }
 </style>
 </head>
@@ -150,36 +133,25 @@ footer {
 <!-- BANNER LIMPO -->
 <header></header>
 
-<!-- HISTÓRIA -->
-<section class="section-light historia">
-    <h2>Uma história que começou com um sonho</h2>
-    <p>
-        A GOAT BEER nasceu em 2021 com o desejo de inovar e transformar o mercado cervejeiro.
-        Desde o início, nosso propósito foi criar algo além do comum: rótulos exclusivos,
-        receitas autorais e inovações patenteadas que elevam o padrão da experiência.
-        Com fábrica própria em Joinville, Santa Catarina,
-        desenvolvemos produtos premiados que unem tecnologia,
-        criatividade e excelência técnica.
-    </p>
-</section>
-
-<!-- PRODUTO -->
-<section class="section-gray">
-    <h2>Inovação no Mercado Cervejeiro</h2>
+<!-- ANN PILSEN -->
+<section>
+    <h2>Inovação que desafia o mercado cervejeiro</h2>
 
     <div class="produto">
-        <img src="cervejaria.jpeg" alt="Gutenberg Pilsen 1,5L">
+        <img src="cervejarosa.jpeg" alt="ANN Pilsen 1,5L">
 
         <div class="produto-info">
-            <h3>Gutenberg Pilsen Rosa</h3>
+            <h3>ANN Pilsen — A Cerveja Rosa Patenteada</h3>
             <p>
-                Uma releitura sofisticada da clássica Pilsen.
-                Produzida com maltes selecionados e matérias-primas diferenciadas,
-                traz notas delicadas de frutas vermelhas e extratos botânicos exclusivos.
-                Sua composição inclui ingredientes especiais importados,
-                como folhas aromáticas raras de Madagascar,
-                proporcionando aroma refinado e identidade marcante.
-                Uma cerveja única no cenário nacional.
+                Criada para ser incomparável. Desenvolvida para marcar uma geração.
+                A ANN Pilsen une cereja fresca, morango maduro e o toque sofisticado da pimenta rosa,
+                criando uma construção de sabor inédita no Brasil.
+                Suas notas delicadas de hibisco africano e a elegância da baunilha de Madagascar
+                elevam cada gole a uma experiência sensorial única.
+                Não é apenas uma Pilsen.
+                É ousadia engarrafada.
+                É identidade própria.
+                É a prova de que inovar é possível quando se tem visão.
             </p>
         </div>
     </div>
@@ -190,12 +162,12 @@ footer {
 </footer>
 
 <script>
-function enterSite() {
-    document.getElementById("age-gate").style.display = "none";
+function enterSite(){
+    document.getElementById("age-gate").style.display="none";
 }
 
-function denyAccess() {
-    document.body.innerHTML = "<div style='background:black;color:white;height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;'><h1>Acesso permitido apenas para maiores de 18 anos.</h1></div>";
+function denyAccess(){
+    document.body.innerHTML="<div style='background:black;color:white;height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;'><h1>Acesso permitido apenas para maiores de 18 anos.</h1></div>";
 }
 </script>
 
