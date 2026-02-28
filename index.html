@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GOAT BEER | Excelência em Cada Gole</title>
+<title>GOAT BEER | Inovação no Mercado Cervejeiro</title>
 
 <style>
 * {
@@ -14,8 +14,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #0f0f0f;
-    color: #ffffff;
+    background-color: #f2f2f2;
+    color: #222;
 }
 
 /* ===== AGE GATE ===== */
@@ -35,13 +35,13 @@ body {
 
 #age-gate h1 {
     font-size: 42px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: #c9a227;
 }
 
 #age-gate p {
-    font-size: 18px;
     margin-bottom: 20px;
+    font-size: 18px;
 }
 
 #age-gate button {
@@ -62,46 +62,75 @@ body {
     color: #fff;
 }
 
-/* ===== HERO (SOMENTE IMAGEM) ===== */
+/* ===== BANNER LIMPO ===== */
 header {
     background: url('banner.jpeg') center center/cover no-repeat;
     height: 100vh;
 }
 
-/* ===== SECTIONS ===== */
+/* ===== SEÇÕES ===== */
 section {
-    padding: 90px 20px;
-    text-align: center;
-}
-
-.section-dark {
-    background: #000;
+    padding: 100px 10%;
 }
 
 .section-light {
-    background: #141414;
+    background: #ffffff;
 }
 
-section h2 {
-    font-size: 38px;
-    color: #c9a227;
+.section-gray {
+    background: #f7f7f7;
+}
+
+h2 {
+    font-size: 36px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
-section p {
+/* ===== HISTÓRIA ===== */
+.historia p {
     max-width: 900px;
     margin: auto;
     font-size: 18px;
     line-height: 1.8;
+    text-align: center;
+}
+
+/* ===== PRODUTO ===== */
+.produto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.produto img {
+    width: 320px;
+}
+
+.produto-info {
+    max-width: 500px;
+}
+
+.produto-info h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.produto-info p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
 }
 
 /* ===== FOOTER ===== */
 footer {
-    background: #000;
+    background: #111;
+    color: #fff;
     padding: 30px;
     text-align: center;
     font-size: 14px;
-    color: #777;
 }
 </style>
 </head>
@@ -122,28 +151,38 @@ footer {
 <header></header>
 
 <!-- HISTÓRIA -->
-<section class="section-light">
+<section class="section-light historia">
     <h2>Uma história que começou com um sonho</h2>
     <p>
-        A GOAT BEER nasceu em 2021 com um propósito claro: inovar.
-        Surgiu de um sonho e do desejo de criar algo que fosse além do comum,
-        algo que realmente marcasse o mercado cervejeiro brasileiro.
-        Desde então, trabalhamos incansavelmente para desenvolver produtos únicos,
-        rótulos premiados e inovações patenteadas que elevam o padrão da experiência.
+        A GOAT BEER nasceu em 2021 com o desejo de inovar e transformar o mercado cervejeiro.
+        Desde o início, nosso propósito foi criar algo além do comum: rótulos exclusivos,
+        receitas autorais e inovações patenteadas que elevam o padrão da experiência.
+        Com fábrica própria em Joinville, Santa Catarina,
+        desenvolvemos produtos premiados que unem tecnologia,
+        criatividade e excelência técnica.
     </p>
 </section>
 
-<!-- INOVAÇÃO E ESTRUTURA -->
-<section class="section-dark">
-    <h2>Produção própria e excelência técnica</h2>
-    <p>
-        Com fábrica própria localizada em Joinville, Santa Catarina,
-        a GOAT BEER une tecnologia, controle rigoroso de qualidade
-        e estrutura industrial preparada para crescimento.
-        Operamos com fabricação própria, laboratório interno
-        e conformidade com as Normas Regulamentadoras aplicáveis ao setor,
-        garantindo segurança, padronização e alto desempenho produtivo.
-    </p>
+<!-- PRODUTO -->
+<section class="section-gray">
+    <h2>Inovação no Mercado Cervejeiro</h2>
+
+    <div class="produto">
+        <img src="cervejaria.jpeg" alt="Gutenberg Pilsen 1,5L">
+
+        <div class="produto-info">
+            <h3>Gutenberg Pilsen Rosa</h3>
+            <p>
+                Uma releitura sofisticada da clássica Pilsen.
+                Produzida com maltes selecionados e matérias-primas diferenciadas,
+                traz notas delicadas de frutas vermelhas e extratos botânicos exclusivos.
+                Sua composição inclui ingredientes especiais importados,
+                como folhas aromáticas raras de Madagascar,
+                proporcionando aroma refinado e identidade marcante.
+                Uma cerveja única no cenário nacional.
+            </p>
+        </div>
+    </div>
 </section>
 
 <footer>
