@@ -64,7 +64,7 @@ body{
 
 /* PADRÃO SLIDER */
 .slider-section{
-    padding:50px 20px;
+    padding:60px 20px;
     text-align:center;
 }
 
@@ -80,7 +80,7 @@ body{
 }
 
 .slide{
-    min-width:85%;
+    min-width:90%;
     scroll-snap-align:center;
     display:flex;
     flex-direction:column;
@@ -89,11 +89,11 @@ body{
 
 .gold-box{
     border:2px solid #c9a227;
-    padding:15px;
+    padding:20px;
     border-radius:10px;
     background:white;
-    width:260px;
-    height:200px;
+    width:320px;
+    height:260px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -101,17 +101,16 @@ body{
 
 .gold-box h2{
     color:#c9a227;
-    margin-bottom:8px;
-    font-size:16px;
+    margin-bottom:12px;
 }
 
 .gold-box p{
-    font-size:12px;
-    line-height:1.3;
+    font-size:14px;
+    line-height:1.5;
 }
 
 .arrow{
-    margin-top:15px;
+    margin-top:20px;
     font-weight:bold;
     color:#c9a227;
     animation:blink 1.2s infinite;
@@ -122,61 +121,66 @@ body{
 }
 
 .beer-img{
-    width:220px;
-    margin-bottom:15px;
+    width:280px;
+    margin-bottom:20px;
 }
 
-/* CAIXINHA FIXA */
+/* FIXED BOX */
 .fixed-box{
     position:relative;
-    margin:25px auto;
+    max-width:400px; /* Ajustado para ficar menor */
+    margin:30px auto;
+    padding:12px; /* padding reduzido */
     border:2px solid #c9a227;
-    padding:15px;
     border-radius:10px;
     background:white;
-    max-width:450px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
     text-align:center;
 }
 
 .fixed-box h2{
     color:#c9a227;
-    margin-bottom:8px;
-    font-size:16px;
+    margin-bottom:10px;
 }
 
 .fixed-box p{
-    font-size:12px;
-    line-height:1.3;
+    font-size:14px;
+    line-height:1.4;
 }
 
-/* CARROSSEL DE IMAGENS */
-.image-carousel{
+/* CARROSSEL DAS IMAGENS */
+.carousel-container{
     display:flex;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
-    gap:12px;
-    padding:12px;
-    justify-content:flex-start;
+    gap:20px;
+    padding:20px;
 }
 
-.image-carousel::-webkit-scrollbar{
+.carousel-container::-webkit-scrollbar{
     display:none;
 }
 
-.carousel-img{
-    min-width:180px;
-    max-width:180px;
+.carousel-slide{
+    min-width:300px;
     scroll-snap-align:center;
     border-radius:10px;
-    flex-shrink:0;
+}
+
+.carousel-slide img{
+    width:100%;
+    border-radius:10px;
 }
 
 @media(min-width:768px){
     .slide{
         flex-direction:row;
         justify-content:center;
-        gap:25px;
+        gap:40px;
     }
+
     .beer-img{
         margin-bottom:0;
     }
@@ -200,14 +204,14 @@ function enterSite(){
     document.getElementById("ageCheck").style.display="none";
 }
 function denyAccess(){
-    alert("Você precisa ter 18 anos ou mais para acessar.");
+    // Mantém na mesma tela se clicar NÃO
 }
 </script>
 
 <!-- BANNER -->
 <div class="banner"></div>
 
-<!-- SLIDER ORIGINAL DAS CAIXINHAS -->
+<!-- INSTITUCIONAL -->
 <section class="slider-section">
 <div class="slider-container">
 
@@ -216,25 +220,21 @@ function denyAccess(){
 <h2>GOAT BEER</h2>
 <p>
 Cervejaria artesanal sediada em Joinville – SC.<br><br>
-Fundada em 2021 com propósito claro: romper padrões e entregar autenticidade.
+Fundada em 2021 com um propósito claro:
+romper padrões e elevar o nível do mercado cervejeiro brasileiro,
+entregando autenticidade em cada detalhe.
 </p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Laboratório Próprio</h2>
+<h2>Compromisso e Qualidade</h2>
 <p>
-Controle rigoroso de qualidade em cada lote, garantindo constância de sabor.
-</p>
-</div>
-</div>
-
-<div class="slide">
-<div class="gold-box">
-<h2>Pesquisa & Exclusividade</h2>
-<p>
-Desenvolvimento de receitas com processos exclusivos e combinações registradas.
+Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br>
+Nossas matérias-primas são importadas e selecionadas com padrão internacional.<br>
+Possuímos certificações rigorosas para atuar no mercado nacional e internacional.<br>
+Prezamos pela qualidade, tecnologia e equipamentos de ponta em toda a produção.
 </p>
 </div>
 </div>
@@ -254,11 +254,21 @@ Prezamos pela qualidade, tecnologia e equipamentos de ponta em toda a produção
 </p>
 </div>
 
-<!-- CARROSSEL DE IMAGENS -->
-<div class="image-carousel">
-<img src="imagem01.jpeg" class="carousel-img" alt="Imagem 1">
-<img src="imagem02.jpeg" class="carousel-img" alt="Imagem 2">
+<!-- CARROSSEL DAS IMAGENS -->
+<section class="slider-section">
+<div class="carousel-container">
+
+<div class="carousel-slide">
+<img src="imagem01.jpeg" alt="Imagem 01">
 </div>
+
+<div class="carousel-slide">
+<img src="imagem02.jpeg" alt="Imagem 02">
+</div>
+
+</div>
+<div class="arrow">← ARRASTE →</div>
+</section>
 
 </body>
 </html>
