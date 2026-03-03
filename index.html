@@ -120,21 +120,46 @@ body{
     50%{opacity:0.3;}
 }
 
-.beer-img{
-    width:280px;
-    margin-bottom:20px;
+/* NOVA SEÇÃO FIXA */
+.info-section{
+    padding:60px 20px;
+    text-align:center;
 }
 
-@media(min-width:768px){
-    .slide{
-        flex-direction:row;
-        justify-content:center;
-        gap:40px;
-    }
+.info-box{
+    border:2px solid #c9a227;
+    padding:20px;
+    border-radius:10px;
+    background:white;
+    max-width:500px;
+    margin:0 auto 40px auto;
+}
 
-    .beer-img{
-        margin-bottom:0;
-    }
+.info-box h2{
+    color:#c9a227;
+    margin-bottom:15px;
+}
+
+.info-box p{
+    font-size:14px;
+    line-height:1.6;
+}
+
+.image-carousel{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:20px;
+}
+
+.image-carousel img{
+    width:300px;
+    border-radius:10px;
+    scroll-snap-align:center;
+}
+
+.image-carousel::-webkit-scrollbar{
+    display:none;
 }
 </style>
 </head>
@@ -168,50 +193,48 @@ function enterSite(){
 <h2>GOAT BEER</h2>
 <p>
 Cervejaria artesanal sediada em Joinville – SC.<br><br>
-Fundada em 2021 com um propósito claro:
-romper padrões e elevar o nível do mercado cervejeiro brasileiro,
-entregando autenticidade em cada detalhe.
+Fundada em 2021 com propósito claro:
+romper padrões e elevar o nível do mercado cervejeiro brasileiro.
 </p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Conformidade Técnica</h2>
+<h2>Excelência Técnica</h2>
 <p>
-Atuamos em conformidade com NR-06, NR-12, NR-17 e NR-23.<br><br>
-Ambiente industrial estruturado,
-seguro e alinhado às exigências legais do setor,
-garantindo responsabilidade e excelência operacional.
-</p>
-</div>
-</div>
-
-<div class="slide">
-<div class="gold-box">
-<h2>Laboratório Interno</h2>
-<p>
-Controle rigoroso de qualidade com análises físico-químicas
-e avaliações sensoriais próprias.<br><br>
-Cada lote passa por validação técnica,
-assegurando padrão elevado e constância de sabor.
-</p>
-</div>
-</div>
-
-<div class="slide">
-<div class="gold-box">
-<h2>Pesquisa & Exclusividade</h2>
-<p>
-Desenvolvimento autoral de receitas
-com processos exclusivos e combinações registradas.<br><br>
-Inovação contínua como base da identidade GOAT BEER.
+Atuação em conformidade com normas regulamentadoras,
+estrutura industrial segura e controle rigoroso de qualidade.
 </p>
 </div>
 </div>
 
 </div>
 <div class="arrow">← ARRASTE →</div>
+</section>
+
+<!-- NOVA CAIXA + IMAGENS -->
+<section class="info-section">
+
+<div class="info-box">
+<h2>Compromisso & Qualidade</h2>
+<p>
+Atuamos dentro de todas as normas regulamentadoras
+e operamos com vendas nacionais e importadas.<br><br>
+90% das nossas matérias-primas são importadas,
+garantindo padrão internacional.<br><br>
+Possuímos selos de qualidade e premiações
+como uma das melhores cervejas do Brasil.
+</p>
+</div>
+
+<div class="image-carousel">
+<img src="imagem01.jpg" alt="Imagem 01">
+<img src="imagem02.jpg" alt="Imagem 02">
+</div>
+
+<div class="arrow">← ARRASTE →</div>
+
 </section>
 
 </body>
