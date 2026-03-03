@@ -64,7 +64,7 @@ body{
 
 /* PADRÃO SLIDER */
 .slider-section{
-    padding:40px 20px;
+    padding:60px 20px;
     text-align:center;
 }
 
@@ -72,8 +72,7 @@ body{
     display:flex;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
-    gap:20px; /* espaço entre caixinhas */
-    padding-bottom:10px;
+    gap:20px;
 }
 
 .slider-container::-webkit-scrollbar{
@@ -81,8 +80,8 @@ body{
 }
 
 .slide{
-    min-width:360px; /* tamanho igual à caixinha fixa */
-    scroll-snap-align:start; /* começa a mostrar a caixinha inteira */
+    min-width:90%;
+    scroll-snap-align:center;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -90,90 +89,68 @@ body{
 
 .gold-box{
     border:2px solid #c9a227;
-    padding:15px;
+    padding:20px;
     border-radius:10px;
     background:white;
-    width:360px;  /* mesma largura da caixinha fixa */
-    height:auto;  /* altura automática para caber o conteúdo */
+    width:300px;
+    min-height:200px;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    text-align:center;
 }
 
 .gold-box h2{
     color:#c9a227;
-    margin-bottom:8px;
-    font-size:16px;
+    margin-bottom:15px;
 }
 
 .gold-box p{
-    font-size:13px;
+    font-size:14px;
     line-height:1.4;
 }
 
 .arrow{
-    margin-top:15px;
+    margin-top:20px;
     font-weight:bold;
     color:#c9a227;
     animation:blink 1.2s infinite;
 }
 
-/* CAIXINHA FIXA */
+@keyframes blink{
+    50%{opacity:0.3;}
+}
+
+.beer-img{
+    width:280px;
+    margin-bottom:20px;
+}
+
 .fixed-box{
     position:relative;
-    max-width:360px;
-    margin:20px auto;
-    padding:10px;
+    margin:40px auto 20px auto;
+    width:300px;
+    padding:20px;
     border:2px solid #c9a227;
     border-radius:10px;
     background:white;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
     text-align:center;
 }
 
-.fixed-box h2{
-    color:#c9a227;
-    margin-bottom:8px;
-    font-size:16px;
-}
-
-.fixed-box p{
-    font-size:13px;
-    line-height:1.4;
-}
-
-/* CARROSSEL DE IMAGENS */
-.carousel-container{
-    display:flex;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    gap:20px; /* espaço entre imagens */
-    padding:15px;
-}
-
-.carousel-container::-webkit-scrollbar{
-    display:none;
-}
-
-.carousel-slide{
-    min-width:360px; /* mesma largura da caixinha fixa */
-    scroll-snap-align:start;
-    border-radius:10px;
-}
-
-.carousel-slide img{
-    width:100%;
-    border-radius:10px;
+.carousel-img{
+    width:140px;
+    height:auto;
+    border-radius:8px;
 }
 
 @media(min-width:768px){
     .slide{
-        flex-direction:column;
+        flex-direction:row;
         justify-content:center;
-        gap:20px;
+        gap:40px;
+    }
+
+    .beer-img{
+        margin-bottom:0;
     }
 }
 </style>
@@ -183,7 +160,7 @@ body{
 
 <!-- +18 VERIFICAÇÃO -->
 <div class="age-overlay" id="ageCheck">
-    <h1>Você tem 18 anos ou mais?<br>Sim ou Não?</h1>
+    <h1>GOAT BEER<br>Você tem 18 anos ou mais?</h1>
     <div>
         <button class="btn-yes" onclick="enterSite()">SIM</button>
         <button class="btn-no" onclick="denyAccess()">NÃO</button>
@@ -195,42 +172,42 @@ function enterSite(){
     document.getElementById("ageCheck").style.display="none";
 }
 function denyAccess(){
-    // Mantém na mesma tela se clicar NÃO
+    alert("Você precisa ter 18 anos ou mais para acessar.");
 }
 </script>
 
 <!-- BANNER -->
 <div class="banner"></div>
 
-<!-- SLIDER INSTITUCIONAL (CAIXINHAS DESLIZANTES) -->
+<!-- CAIXINHAS PRINCIPAIS -->
 <section class="slider-section">
 <div class="slider-container">
 
 <div class="slide">
 <div class="gold-box">
-<h2>Goat Beer</h2>
-<p>Cervejaria artesanal sediada em Joinville – SC.</p>
+<h2>GOAT BEER</h2>
+<p>Cervejaria artesanal sediada em Joinville – SC.<br><br>Fundada em 2021 com um propósito claro: romper padrões e entregar autenticidade em cada detalhe.</p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Produção</h2>
-<p>Capacidade de produção de milhares de litros por mês. Equipamentos de alta tecnologia.</p>
+<h2>Laboratório Próprio</h2>
+<p>Todos os nossos processos passam por controle rigoroso de qualidade em nosso laboratório próprio. Garantindo sabor, consistência e segurança em cada lote.</p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Qualidade</h2>
-<p>Todos os lotes passam por controle rigoroso e são únicos.</p>
+<h2>Processos de Produção</h2>
+<p>Nossa linha de produção utiliza equipamentos de alta tecnologia, garantindo que todos os lotes sejam únicos, com capacidade de produzir milhares de litros por mês.</p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Pesquisa & Exclusividade</h2>
-<p>Receitas autorais com processos exclusivos e combinações registradas.</p>
+<h2>Patentes e Inovação</h2>
+<p>Nossas cervejas são autorais e patenteadas, com receitas exclusivas que destacam a inovação e sofisticação da GOAT BEER.</p>
 </div>
 </div>
 
@@ -240,30 +217,26 @@ function denyAccess(){
 
 <!-- CAIXINHA FIXA -->
 <div class="fixed-box">
-<h2>Excelência Técnica</h2>
-<p>
-Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br>
-Nossas matérias-primas são importadas e selecionadas com padrão internacional.<br>
-Possuímos certificações rigorosas para atuar no mercado nacional e internacional.<br>
-Prezamos pela qualidade, tecnologia e equipamentos de ponta em toda a produção.
-</p>
+<p>Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br>Nossas matérias-primas são importadas.<br>Temos certificações rigorosas para atuar no mercado nacional e internacional. Prezamos pela qualidade.</p>
 </div>
 
 <!-- CARROSSEL DE IMAGENS -->
 <section class="slider-section">
-<div class="carousel-container">
+<div class="slider-container">
 
-<div class="carousel-slide">
-<img src="imagem01.jpeg" alt="Imagem 01">
+<div class="slide">
+<img src="imagem01.jpeg" class="carousel-img">
 </div>
-
-<div class="carousel-slide">
-<img src="imagem02.jpeg" alt="Imagem 02">
+<div class="slide">
+<img src="imagem02.jpeg" class="carousel-img">
 </div>
 
 </div>
 <div class="arrow">← ARRASTE →</div>
 </section>
+
+<!-- FUTURAS CERVEJAS (ex.: Rosa, Pilsen, IPA) -->
+<!-- Aqui você adiciona depois, seguindo o padrão de slides já criado -->
 
 </body>
 </html>
