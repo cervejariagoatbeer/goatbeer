@@ -56,6 +56,7 @@ body{
     color:white;
 }
 
+/* BANNER */
 .banner{
     width:100%;
     height:100vh;
@@ -120,46 +121,21 @@ body{
     50%{opacity:0.3;}
 }
 
-/* NOVA SEÇÃO FIXA */
-.info-section{
-    padding:60px 20px;
-    text-align:center;
+.beer-img{
+    width:280px;
+    margin-bottom:20px;
 }
 
-.info-box{
-    border:2px solid #c9a227;
-    padding:20px;
-    border-radius:10px;
-    background:white;
-    max-width:500px;
-    margin:0 auto 40px auto;
-}
+@media(min-width:768px){
+    .slide{
+        flex-direction:row;
+        justify-content:center;
+        gap:40px;
+    }
 
-.info-box h2{
-    color:#c9a227;
-    margin-bottom:15px;
-}
-
-.info-box p{
-    font-size:14px;
-    line-height:1.6;
-}
-
-.image-carousel{
-    display:flex;
-    overflow-x:auto;
-    scroll-snap-type:x mandatory;
-    gap:20px;
-}
-
-.image-carousel img{
-    width:300px;
-    border-radius:10px;
-    scroll-snap-align:center;
-}
-
-.image-carousel::-webkit-scrollbar{
-    display:none;
+    .beer-img{
+        margin-bottom:0;
+    }
 }
 </style>
 </head>
@@ -168,10 +144,10 @@ body{
 
 <!-- +18 VERIFICAÇÃO -->
 <div class="age-overlay" id="ageCheck">
-    <h1>GOAT BEER<br>Você tem 18 anos ou mais?</h1>
+    <h1>Você tem 18 anos ou mais?<br>Sim ou Não?</h1>
     <div>
         <button class="btn-yes" onclick="enterSite()">SIM</button>
-        <button class="btn-no">NÃO</button>
+        <button class="btn-no" onclick="denyAccess()">NÃO</button>
     </div>
 </div>
 
@@ -179,12 +155,16 @@ body{
 function enterSite(){
     document.getElementById("ageCheck").style.display="none";
 }
+function denyAccess(){
+    // Não redireciona, fica na mesma tela
+    alert("Você precisa ter 18 anos ou mais para acessar.");
+}
 </script>
 
 <!-- BANNER -->
 <div class="banner"></div>
 
-<!-- INSTITUCIONAL -->
+<!-- GUT BEER – INSTITUCIONAL -->
 <section class="slider-section">
 <div class="slider-container">
 
@@ -193,18 +173,7 @@ function enterSite(){
 <h2>GOAT BEER</h2>
 <p>
 Cervejaria artesanal sediada em Joinville – SC.<br><br>
-Fundada em 2021 com propósito claro:
-romper padrões e elevar o nível do mercado cervejeiro brasileiro.
-</p>
-</div>
-</div>
-
-<div class="slide">
-<div class="gold-box">
-<h2>Excelência Técnica</h2>
-<p>
-Atuação em conformidade com normas regulamentadoras,
-estrutura industrial segura e controle rigoroso de qualidade.
+Fundada em 2021 com um propósito claro: romper padrões e elevar o nível do mercado cervejeiro brasileiro, entregando autenticidade em cada detalhe.
 </p>
 </div>
 </div>
@@ -213,28 +182,34 @@ estrutura industrial segura e controle rigoroso de qualidade.
 <div class="arrow">← ARRASTE →</div>
 </section>
 
-<!-- NOVA CAIXA + IMAGENS -->
-<section class="info-section">
+<!-- COMPROMISSO E QUALIDADE + CARROSSEL DE IMAGENS -->
+<section class="slider-section">
+<div class="slider-container">
 
-<div class="info-box">
-<h2>Compromisso & Qualidade</h2>
+<!-- CAIXINHA FIXA -->
+<div class="slide">
+<div class="gold-box">
+<h2>Compromisso e Qualidade</h2>
 <p>
-Atuamos dentro de todas as normas regulamentadoras
-e operamos com vendas nacionais e importadas.<br><br>
-90% das nossas matérias-primas são importadas,
-garantindo padrão internacional.<br><br>
-Possuímos selos de qualidade e premiações
-como uma das melhores cervejas do Brasil.
+Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br><br>
+Nossas matérias-primas são importadas e temos certificações rigorosas para atuar no mercado nacional e internacional. Prezamos pela qualidade, garantindo excelência em todos os lotes produzidos com equipamentos de alta tecnologia.
 </p>
 </div>
+</div>
 
-<div class="image-carousel">
-<img src="imagem01.jpg" alt="Imagem 01">
-<img src="imagem02.jpg" alt="Imagem 02">
+<!-- IMAGEM 01 -->
+<div class="slide">
+<img src="imagem01.jpeg" class="beer-img" alt="Imagem 01">
+</div>
+
+<!-- IMAGEM 02 -->
+<div class="slide">
+<img src="imagem02.jpeg" class="beer-img" alt="Imagem 02">
+</div>
+
 </div>
 
 <div class="arrow">← ARRASTE →</div>
-
 </section>
 
 </body>
