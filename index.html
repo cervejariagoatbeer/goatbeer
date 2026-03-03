@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOAT BEER</title>
+
 <style>
 body{
     margin:0;
@@ -31,20 +32,13 @@ body{
 }
 
 .age-overlay h1{
-    font-size:36px;
-    color:#c9a227; /* amarelo GOAT BEER */
-    margin-bottom:15px;
-}
-
-.age-overlay p{
-    font-size:20px;
-    color:white;
+    font-size:28px;
     margin-bottom:30px;
 }
 
 .age-overlay button{
-    margin:10px;
-    padding:15px 40px;
+    margin:15px;
+    padding:18px 45px;
     border:none;
     font-weight:bold;
     font-size:18px;
@@ -62,20 +56,94 @@ body{
     color:white;
 }
 
-/* BANNER */
 .banner{
     width:100%;
     height:100vh;
     background:url('capa01.jpeg') center/cover no-repeat;
 }
+
+/* PADRÃO SLIDER */
+.slider-section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.slider-container{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:20px;
+}
+
+.slider-container::-webkit-scrollbar{
+    display:none;
+}
+
+.slide{
+    min-width:90%;
+    scroll-snap-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.gold-box{
+    border:2px solid #c9a227;
+    padding:25px;
+    border-radius:10px;
+    background:white;
+    width:320px;
+    height:280px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.gold-box h2{
+    color:#c9a227;
+    margin-bottom:15px;
+}
+
+.gold-box p{
+    font-size:14px;
+    line-height:1.5;
+}
+
+.arrow{
+    margin-top:20px;
+    font-weight:bold;
+    color:#c9a227;
+    animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+    50%{opacity:0.3;}
+}
+
+.beer-img{
+    width:280px;
+    margin-bottom:20px;
+}
+
+@media(min-width:768px){
+    .slide{
+        flex-direction:row;
+        justify-content:center;
+        gap:40px;
+    }
+
+    .beer-img{
+        margin-bottom:0;
+    }
+}
 </style>
 </head>
+
 <body>
 
 <!-- +18 VERIFICAÇÃO -->
 <div class="age-overlay" id="ageCheck">
-    <h1>GOAT BEER</h1>
-    <p>Você tem mais de 18 anos?</p>
+    <h1>GOAT BEER<br>Você tem 18 anos ou mais?</h1>
     <div>
         <button class="btn-yes" onclick="enterSite()">SIM</button>
         <button class="btn-no">NÃO</button>
@@ -90,6 +158,61 @@ function enterSite(){
 
 <!-- BANNER -->
 <div class="banner"></div>
+
+<!-- INSTITUCIONAL -->
+<section class="slider-section">
+<div class="slider-container">
+
+<div class="slide">
+<div class="gold-box">
+<h2>GOAT BEER</h2>
+<p>
+Cervejaria artesanal sediada em Joinville – SC.<br><br>
+Fundada em 2021 com um propósito claro:
+romper padrões e elevar o nível do mercado cervejeiro brasileiro,
+entregando autenticidade em cada detalhe.
+</p>
+</div>
+</div>
+
+<div class="slide">
+<div class="gold-box">
+<h2>Conformidade Técnica</h2>
+<p>
+Atuamos em conformidade com NR-06, NR-12, NR-17 e NR-23.<br><br>
+Ambiente industrial estruturado,
+seguro e alinhado às exigências legais do setor,
+garantindo responsabilidade e excelência operacional.
+</p>
+</div>
+</div>
+
+<div class="slide">
+<div class="gold-box">
+<h2>Laboratório Interno</h2>
+<p>
+Controle rigoroso de qualidade com análises físico-químicas
+e avaliações sensoriais próprias.<br><br>
+Cada lote passa por validação técnica,
+assegurando padrão elevado e constância de sabor.
+</p>
+</div>
+</div>
+
+<div class="slide">
+<div class="gold-box">
+<h2>Pesquisa & Exclusividade</h2>
+<p>
+Desenvolvimento autoral de receitas
+com processos exclusivos e combinações registradas.<br><br>
+Inovação contínua como base da identidade GOAT BEER.
+</p>
+</div>
+</div>
+
+</div>
+<div class="arrow">← ARRASTE →</div>
+</section>
 
 </body>
 </html>
