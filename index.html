@@ -13,6 +13,7 @@ body{
     color:#000;
 }
 
+/* +18 */
 .age-overlay{
     position:fixed;
     top:0;
@@ -30,11 +31,6 @@ body{
     padding:20px;
 }
 
-.age-overlay h1{
-    font-size:28px;
-    margin-bottom:30px;
-}
-
 .age-overlay button{
     margin:15px;
     padding:18px 45px;
@@ -45,22 +41,29 @@ body{
     border-radius:6px;
 }
 
-.btn-yes{
-    background:#c9a227;
-    color:black;
-}
+.btn-yes{ background:#c9a227; color:black; }
+.btn-no{ background:#444; color:white; }
 
-.btn-no{
-    background:#444;
-    color:white;
-}
-
+/* Banner */
 .banner{
     width:100%;
     height:100vh;
-    background: url('capa01.jpeg') center/cover no-repeat;
+    background:url('capa01.jpeg') center/cover no-repeat;
 }
 
+/* Seções */
+.section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.gold-title{
+    color:#c9a227;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+/* Slider padrão */
 .slider-section{
     padding:60px 20px;
     text-align:center;
@@ -85,27 +88,22 @@ body{
     align-items:center;
 }
 
+.beer-img{
+    width:280px;
+    margin-bottom:20px;
+}
+
 .gold-box{
     border:2px solid #c9a227;
     padding:30px;
     border-radius:10px;
-    background:white;
     width:360px;
-    min-height:330px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+    background:white;
 }
 
 .gold-box h2{
     color:#c9a227;
     margin-bottom:15px;
-    font-size:20px;
-}
-
-.gold-box p{
-    font-size:13px;
-    line-height:1.6;
 }
 
 .arrow{
@@ -119,20 +117,11 @@ body{
     50%{opacity:0.3;}
 }
 
-.beer-img{
-    width:280px;
-    margin-bottom:20px;
-}
-
 @media(min-width:768px){
     .slide{
         flex-direction:row;
         justify-content:center;
         gap:40px;
-    }
-
-    .beer-img{
-        margin-bottom:0;
     }
 }
 </style>
@@ -140,51 +129,100 @@ body{
 
 <body>
 
+<!-- +18 -->
 <div class="age-overlay" id="ageCheck">
-    <h1>Você tem 18 anos ou mais?<br>Sim ou Não?</h1>
-    <div>
-        <button class="btn-yes" onclick="enterSite()">SIM</button>
-        <button class="btn-no" onclick="denyAccess()">NÃO</button>
-    </div>
+<h1>Você tem 18 anos ou mais?</h1>
+<div>
+<button class="btn-yes" onclick="enterSite()">SIM</button>
+<button class="btn-no" onclick="denyAccess()">NÃO</button>
+</div>
 </div>
 
 <script>
 function enterSite(){
-    document.getElementById("ageCheck").style.display="none";
+document.getElementById("ageCheck").style.display="none";
 }
 function denyAccess(){
-    window.location.href="https://www.google.com";
+window.location.href="https://www.google.com";
 }
 </script>
 
+<!-- CAPA -->
 <div class="banner"></div>
 
-<!-- AQUI MANTÉM TODO SEU SITE COMO JÁ ESTAVA -->
+<!-- TEXTO PRINCIPAL -->
+<section class="section">
+<h2 class="gold-title">GOAT BEER</h2>
+<p>
+Excelência em cada detalhe.  
+Cervejas artesanais com padrão premium e identidade exclusiva.
+</p>
+</section>
 
-<!-- CERVEJA IPA (última existente) -->
+<!-- CERTIFICAÇÕES -->
+<section class="section">
+<h2 class="gold-title">Certificações</h2>
+<p>Produto com controle rigoroso de qualidade e processos certificados.</p>
+</section>
+
+<!-- CAIXAS EXPLICANDO A MARCA -->
+<section class="section">
+<h2 class="gold-title">Sobre a Goat Beer</h2>
+<p>
+Qualidade, tradição e inovação.  
+Cada rótulo é desenvolvido com técnica e personalidade.
+</p>
+</section>
+
+<!-- CERVEJA ROSA -->
 <section class="slider-section">
 <div class="slider-container">
-
 <div class="slide">
-<img src="ipa.jpeg" class="beer-img">
+<img src="cervejarosa.jpeg" class="beer-img">
 </div>
-
 <div class="slide">
 <div class="gold-box">
-<h2>GOAT BEER IPA</h2>
-<p>
-Intensidade e presença marcante.<br><br>
-Lúpulos aromáticos selecionados entregam notas vibrantes e amargor estruturado.<br><br>
-Uma IPA autoral criada para quem busca personalidade e sofisticação.
-</p>
+<h2>GOAT BEER ROSA</h2>
+<p>Cerveja exclusiva com identidade marcante e perfil sofisticado.</p>
 </div>
 </div>
-
 </div>
 <div class="arrow">← ARRASTE →</div>
 </section>
 
-<!-- NOVA SEÇÃO LATAS (CORRETA E FUNCIONANDO) -->
+<!-- PILSEN -->
+<section class="slider-section">
+<div class="slider-container">
+<div class="slide">
+<img src="cervejapilsen.jpeg" class="beer-img">
+</div>
+<div class="slide">
+<div class="gold-box">
+<h2>GOAT BEER PILSEN</h2>
+<p>Leve, equilibrada e refrescante. Ideal para todos os momentos.</p>
+</div>
+</div>
+</div>
+<div class="arrow">← ARRASTE →</div>
+</section>
+
+<!-- IPA -->
+<section class="slider-section">
+<div class="slider-container">
+<div class="slide">
+<img src="ipa.jpeg" class="beer-img">
+</div>
+<div class="slide">
+<div class="gold-box">
+<h2>GOAT BEER IPA</h2>
+<p>Intensa, aromática e estruturada para apreciadores exigentes.</p>
+</div>
+</div>
+</div>
+<div class="arrow">← ARRASTE →</div>
+</section>
+
+<!-- NOVA SEÇÃO LATAS (ADICIONADA CORRETAMENTE APÓS IPA) -->
 <section class="slider-section">
 <div class="slider-container">
 
@@ -200,13 +238,11 @@ Uma IPA autoral criada para quem busca personalidade e sofisticação.
 <div class="gold-box">
 <h2>Opções Exclusivas em Latas</h2>
 <p>
-Também contamos com diversas opções disponíveis em latas,
-com rótulos exclusivos e padrão diferenciado.<br><br>
-Cervejas únicas no Brasil,
-desenvolvidas com rigor técnico e identidade própria,
-mantendo o elevado padrão de qualidade.<br><br>
-Formulações registradas e patenteadas,
-garantindo exclusividade e autenticidade no mercado nacional.
+Também temos diversas opções disponíveis em latas,  
+com rótulos diferenciados e padrão elevado de qualidade.<br><br>
+Cervejas únicas e exclusivas no Brasil,  
+com formulações patenteadas pela GOAT BEER,  
+garantindo autenticidade e excelência.
 </p>
 </div>
 </div>
