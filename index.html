@@ -56,7 +56,6 @@ body{
     color:white;
 }
 
-/* BANNER */
 .banner{
     width:100%;
     height:100vh;
@@ -126,13 +125,55 @@ body{
     margin-bottom:20px;
 }
 
+/* CAIXINHA FIXA */
+.fixed-box{
+    position:relative;
+    margin:40px auto;
+    border:2px solid #c9a227;
+    padding:25px;
+    border-radius:10px;
+    background:white;
+    max-width:600px;
+    text-align:center;
+}
+
+.fixed-box h2{
+    color:#c9a227;
+    margin-bottom:15px;
+}
+
+.fixed-box p{
+    font-size:14px;
+    line-height:1.5;
+}
+
+/* CARROSSEL DE IMAGENS */
+.image-carousel{
+    display:flex;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+    gap:20px;
+    padding:20px;
+    justify-content:center;
+}
+
+.image-carousel::-webkit-scrollbar{
+    display:none;
+}
+
+.carousel-img{
+    min-width:300px;
+    max-width:300px;
+    scroll-snap-align:center;
+    border-radius:10px;
+}
+
 @media(min-width:768px){
     .slide{
         flex-direction:row;
         justify-content:center;
         gap:40px;
     }
-
     .beer-img{
         margin-bottom:0;
     }
@@ -156,7 +197,6 @@ function enterSite(){
     document.getElementById("ageCheck").style.display="none";
 }
 function denyAccess(){
-    // Não redireciona, fica na mesma tela
     alert("Você precisa ter 18 anos ou mais para acessar.");
 }
 </script>
@@ -164,7 +204,7 @@ function denyAccess(){
 <!-- BANNER -->
 <div class="banner"></div>
 
-<!-- GUT BEER – INSTITUCIONAL -->
+<!-- SLIDER ORIGINAL DAS CAIXINHAS -->
 <section class="slider-section">
 <div class="slider-container">
 
@@ -173,44 +213,49 @@ function denyAccess(){
 <h2>GOAT BEER</h2>
 <p>
 Cervejaria artesanal sediada em Joinville – SC.<br><br>
-Fundada em 2021 com um propósito claro: romper padrões e elevar o nível do mercado cervejeiro brasileiro, entregando autenticidade em cada detalhe.
+Fundada em 2021 com propósito claro: romper padrões e entregar autenticidade.
 </p>
 </div>
 </div>
 
-</div>
-<div class="arrow">← ARRASTE →</div>
-</section>
-
-<!-- COMPROMISSO E QUALIDADE + CARROSSEL DE IMAGENS -->
-<section class="slider-section">
-<div class="slider-container">
-
-<!-- CAIXINHA FIXA -->
 <div class="slide">
 <div class="gold-box">
-<h2>Compromisso e Qualidade</h2>
+<h2>Laboratório Próprio</h2>
 <p>
-Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br><br>
-Nossas matérias-primas são importadas e temos certificações rigorosas para atuar no mercado nacional e internacional. Prezamos pela qualidade, garantindo excelência em todos os lotes produzidos com equipamentos de alta tecnologia.
+Controle rigoroso de qualidade em cada lote, garantindo constância de sabor.
 </p>
 </div>
 </div>
 
-<!-- IMAGEM 01 -->
 <div class="slide">
-<img src="imagem01.jpeg" class="beer-img" alt="Imagem 01">
+<div class="gold-box">
+<h2>Pesquisa & Exclusividade</h2>
+<p>
+Desenvolvimento de receitas com processos exclusivos e combinações registradas.
+</p>
+</div>
 </div>
 
-<!-- IMAGEM 02 -->
-<div class="slide">
-<img src="imagem02.jpeg" class="beer-img" alt="Imagem 02">
 </div>
-
-</div>
-
 <div class="arrow">← ARRASTE →</div>
 </section>
+
+<!-- CAIXINHA FIXA -->
+<div class="fixed-box">
+<h2>Excelência Técnica</h2>
+<p>
+Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br>
+Nossas matérias-primas são importadas e selecionadas com padrão internacional.<br>
+Possuímos certificações rigorosas para atuar no mercado nacional e internacional.<br>
+Prezamos pela qualidade, tecnologia e equipamentos de ponta em toda a produção.
+</p>
+</div>
+
+<!-- CARROSSEL DE IMAGENS -->
+<div class="image-carousel">
+<img src="imagem01.jpeg" class="carousel-img" alt="Imagem 1">
+<img src="imagem02.jpeg" class="carousel-img" alt="Imagem 2">
+</div>
 
 </body>
 </html>
