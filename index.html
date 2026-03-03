@@ -64,7 +64,7 @@ body{
 
 /* PADRÃO SLIDER */
 .slider-section{
-    padding:60px 20px;
+    padding:50px 20px;
     text-align:center;
 }
 
@@ -80,7 +80,7 @@ body{
 }
 
 .slide{
-    min-width:90%;
+    min-width:85%;
     scroll-snap-align:center;
     display:flex;
     flex-direction:column;
@@ -89,11 +89,11 @@ body{
 
 .gold-box{
     border:2px solid #c9a227;
-    padding:25px;
+    padding:15px;
     border-radius:10px;
     background:white;
-    width:320px;
-    height:280px;
+    width:260px;
+    height:200px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -101,16 +101,17 @@ body{
 
 .gold-box h2{
     color:#c9a227;
-    margin-bottom:15px;
+    margin-bottom:8px;
+    font-size:16px;
 }
 
 .gold-box p{
-    font-size:14px;
-    line-height:1.5;
+    font-size:12px;
+    line-height:1.3;
 }
 
 .arrow{
-    margin-top:20px;
+    margin-top:15px;
     font-weight:bold;
     color:#c9a227;
     animation:blink 1.2s infinite;
@@ -121,30 +122,31 @@ body{
 }
 
 .beer-img{
-    width:280px;
-    margin-bottom:20px;
+    width:220px;
+    margin-bottom:15px;
 }
 
 /* CAIXINHA FIXA */
 .fixed-box{
     position:relative;
-    margin:40px auto;
+    margin:25px auto;
     border:2px solid #c9a227;
-    padding:25px;
+    padding:15px;
     border-radius:10px;
     background:white;
-    max-width:600px;
+    max-width:450px;
     text-align:center;
 }
 
 .fixed-box h2{
     color:#c9a227;
-    margin-bottom:15px;
+    margin-bottom:8px;
+    font-size:16px;
 }
 
 .fixed-box p{
-    font-size:14px;
-    line-height:1.5;
+    font-size:12px;
+    line-height:1.3;
 }
 
 /* CARROSSEL DE IMAGENS */
@@ -152,9 +154,9 @@ body{
     display:flex;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
-    gap:20px;
-    padding:20px;
-    justify-content:center;
+    gap:12px;
+    padding:12px;
+    justify-content:flex-start;
 }
 
 .image-carousel::-webkit-scrollbar{
@@ -162,17 +164,18 @@ body{
 }
 
 .carousel-img{
-    min-width:300px;
-    max-width:300px;
+    min-width:180px;
+    max-width:180px;
     scroll-snap-align:center;
     border-radius:10px;
+    flex-shrink:0;
 }
 
 @media(min-width:768px){
     .slide{
         flex-direction:row;
         justify-content:center;
-        gap:40px;
+        gap:25px;
     }
     .beer-img{
         margin-bottom:0;
