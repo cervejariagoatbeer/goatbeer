@@ -93,7 +93,7 @@ body{
     border-radius:10px;
     background:white;
     width:320px;
-    height:280px;
+    height:auto;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -120,9 +120,10 @@ body{
     50%{opacity:0.3;}
 }
 
-.beer-img{
+.lata-img{
     width:280px;
     margin-bottom:20px;
+    border-radius:10px;
 }
 
 @media(min-width:768px){
@@ -132,7 +133,7 @@ body{
         gap:40px;
     }
 
-    .beer-img{
+    .lata-img{
         margin-bottom:0;
     }
 }
@@ -162,28 +163,38 @@ function denyAccess(){
 <!-- BANNER -->
 <div class="banner"></div>
 
-<!-- TODO O SEU CONTEÚDO PERMANECE IGUAL ATÉ AQUI -->
-<!-- (Institucional, Rosa, Pilsen, IPA — tudo exatamente igual) -->
+<!-- ========================= -->
+<!-- SEÇÃO DAS LATAS -->
+<!-- ========================= -->
 
-<!-- OPÇÕES EM LATA -->
 <section class="slider-section">
 <div class="slider-container">
 
 <div class="slide">
-<img src="lata01.jpeg" class="beer-img">
-</div>
-
-<div class="slide">
-<img src="lata02.jpeg" class="beer-img">
-</div>
-
-<div class="slide">
+<img src="lata01.jpeg" class="lata-img">
 <div class="gold-box">
-<h2>OPÇÕES EM LATA</h2>
+<h2>Lata Edição Especial 01</h2>
 <p>
-A linha GOAT BEER também disponível em lata.<br><br>
-Praticidade, conservação ideal e o mesmo padrão artesanal.<br><br>
-Escolha sua versão e aproveite a experiência completa.
+Design exclusivo desenvolvido para representar
+a identidade ousada da GOAT BEER.<br><br>
+Impressão premium, acabamento refinado
+e presença marcante no ponto de venda.<br><br>
+Uma embalagem que transmite personalidade,
+força e autenticidade.
+</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="lata02.jpeg" class="lata-img">
+<div class="gold-box">
+<h2>Lata Edição Especial 02</h2>
+<p>
+Conceito visual inovador
+com estética moderna e sofisticada.<br><br>
+Projeto gráfico pensado para destacar
+a marca e valorizar a experiência do consumidor.<br><br>
+Mais que embalagem, uma extensão da identidade GOAT BEER.
 </p>
 </div>
 </div>
