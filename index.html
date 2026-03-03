@@ -64,7 +64,7 @@ body{
 
 /* PADRÃO SLIDER */
 .slider-section{
-    padding:60px 20px;
+    padding:40px 20px;
     text-align:center;
 }
 
@@ -72,7 +72,8 @@ body{
     display:flex;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
-    gap:20px;
+    gap:15px;
+    padding-bottom:10px;
 }
 
 .slider-container::-webkit-scrollbar{
@@ -80,7 +81,7 @@ body{
 }
 
 .slide{
-    min-width:90%;
+    min-width:220px; /* reduzido para caber mais caixinhas */
     scroll-snap-align:center;
     display:flex;
     flex-direction:column;
@@ -89,28 +90,30 @@ body{
 
 .gold-box{
     border:2px solid #c9a227;
-    padding:20px;
+    padding:15px; /* reduzido */
     border-radius:10px;
     background:white;
-    width:320px;
-    height:260px;
+    width:220px;  /* reduzido */
+    height:200px; /* reduzido */
     display:flex;
     flex-direction:column;
     justify-content:center;
+    text-align:center;
 }
 
 .gold-box h2{
     color:#c9a227;
-    margin-bottom:12px;
+    margin-bottom:8px;
+    font-size:16px;
 }
 
 .gold-box p{
-    font-size:14px;
-    line-height:1.5;
+    font-size:13px;
+    line-height:1.3;
 }
 
 .arrow{
-    margin-top:20px;
+    margin-top:15px;
     font-weight:bold;
     color:#c9a227;
     animation:blink 1.2s infinite;
@@ -125,12 +128,12 @@ body{
     margin-bottom:20px;
 }
 
-/* FIXED BOX */
+/* CAIXINHA FIXA */
 .fixed-box{
     position:relative;
-    max-width:400px; /* Ajustado para ficar menor */
-    margin:30px auto;
-    padding:12px; /* padding reduzido */
+    max-width:360px; /* ligeiramente menor */
+    margin:20px auto;
+    padding:10px; /* padding menor */
     border:2px solid #c9a227;
     border-radius:10px;
     background:white;
@@ -142,11 +145,12 @@ body{
 
 .fixed-box h2{
     color:#c9a227;
-    margin-bottom:10px;
+    margin-bottom:8px;
+    font-size:16px;
 }
 
 .fixed-box p{
-    font-size:14px;
+    font-size:13px;
     line-height:1.4;
 }
 
@@ -155,8 +159,8 @@ body{
     display:flex;
     overflow-x:auto;
     scroll-snap-type:x mandatory;
-    gap:20px;
-    padding:20px;
+    gap:15px;
+    padding:15px;
 }
 
 .carousel-container::-webkit-scrollbar{
@@ -164,7 +168,7 @@ body{
 }
 
 .carousel-slide{
-    min-width:300px;
+    min-width:260px;
     scroll-snap-align:center;
     border-radius:10px;
 }
@@ -176,13 +180,9 @@ body{
 
 @media(min-width:768px){
     .slide{
-        flex-direction:row;
+        flex-direction:column;
         justify-content:center;
-        gap:40px;
-    }
-
-    .beer-img{
-        margin-bottom:0;
+        gap:20px;
     }
 }
 </style>
@@ -211,31 +211,35 @@ function denyAccess(){
 <!-- BANNER -->
 <div class="banner"></div>
 
-<!-- INSTITUCIONAL -->
+<!-- SLIDER INSTITUCIONAL (CAIXINHAS DESLIZANTES) -->
 <section class="slider-section">
 <div class="slider-container">
 
 <div class="slide">
 <div class="gold-box">
-<h2>GOAT BEER</h2>
-<p>
-Cervejaria artesanal sediada em Joinville – SC.<br><br>
-Fundada em 2021 com um propósito claro:
-romper padrões e elevar o nível do mercado cervejeiro brasileiro,
-entregando autenticidade em cada detalhe.
-</p>
+<h2>Goat Beer</h2>
+<p>Cervejaria artesanal sediada em Joinville – SC.</p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Compromisso e Qualidade</h2>
-<p>
-Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br>
-Nossas matérias-primas são importadas e selecionadas com padrão internacional.<br>
-Possuímos certificações rigorosas para atuar no mercado nacional e internacional.<br>
-Prezamos pela qualidade, tecnologia e equipamentos de ponta em toda a produção.
-</p>
+<h2>Produção</h2>
+<p>Capacidade de produção de milhares de litros por mês. Equipamentos de alta tecnologia.</p>
+</div>
+</div>
+
+<div class="slide">
+<div class="gold-box">
+<h2>Qualidade</h2>
+<p>Todos os lotes passam por controle rigoroso e são únicos.</p>
+</div>
+</div>
+
+<div class="slide">
+<div class="gold-box">
+<h2>Pesquisa & Exclusividade</h2>
+<p>Receitas autorais com processos exclusivos e combinações registradas.</p>
 </div>
 </div>
 
@@ -254,7 +258,7 @@ Prezamos pela qualidade, tecnologia e equipamentos de ponta em toda a produção
 </p>
 </div>
 
-<!-- CARROSSEL DAS IMAGENS -->
+<!-- CARROSSEL DE IMAGENS -->
 <section class="slider-section">
 <div class="carousel-container">
 
