@@ -349,6 +349,45 @@ function denyAccess(){
 </div>
 <div class="arrow">← ARRASTE →</div>
 </section>
+<!-- FORMULÁRIO DE CADASTRO -->
+<section class="slider-section" style="padding:40px 20px; text-align:center; background:#f8f8f8;">
+  <div class="slider-container" style="flex-direction:column; align-items:center; gap:20px;">
 
+    <div class="gold-box" style="width:300px; min-height:auto;">
+      <h2>Venha fazer parte!</h2>
+      <p>Leve a GOAT BEER para o seu bar, restaurante, adega ou distribuidor de bebidas.<br>
+      Temos total controle de estoque, atendemos todo o Brasil. Faça seu cadastro, conheça nossos produtos e venha saber mais!</p>
+    </div>
+
+    <form id="goatbeerForm" style="display:flex; flex-direction:column; gap:15px; width:300px;" onsubmit="enviarWhatsApp(event)">
+      <input type="text" name="nome" placeholder="Nome completo*" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+      <input type="text" name="cpf_cnpj" placeholder="CPF ou CNPJ*" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+      <input type="text" name="endereco" placeholder="Endereço completo*" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+      <input type="email" name="email" placeholder="E-mail*" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+      <input type="tel" name="telefone" placeholder="Telefone*" required style="padding:10px; border-radius:5px; border:1px solid #ccc;">
+      <button type="submit" style="padding:15px; border:none; border-radius:6px; background:#c9a227; color:black; font-weight:bold; cursor:pointer;">Enviar para WhatsApp</button>
+    </form>
+
+  </div>
+</section>
+
+<script>
+function enviarWhatsApp(e){
+    e.preventDefault(); // impede que a página recarregue
+    const form = document.getElementById("goatbeerForm");
+    const nome = form.nome.value;
+    const cpf = form.cpf_cnpj.value;
+    const endereco = form.endereco.value;
+    const email = form.email.value;
+    const telefone = form.telefone.value;
+
+    const mensagem = Olá! Quero fazer meu cadastro:\nNome: ${nome}\nCPF/CNPJ: ${cpf}\nEndereço: ${endereco}\nE-mail: ${email}\nTelefone: ${telefone};
+    
+    const numero = "5542988433807"; // número do WhatsApp com DDI + DDD
+    const url = https://wa.me/${numero}?text=${encodeURIComponent(mensagem)};
+
+    window.open(url, "_blank"); // abre o WhatsApp em nova aba
+}
+</script>
 </body>
 </html>
