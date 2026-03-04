@@ -349,15 +349,13 @@ function denyAccess(){
 </div>
 <div class="arrow">← ARRASTE →</div>
 </section>
-<!-- FORMULÁRIO DE CADASTRO - VERSÃO BOTÃO WHATSAPP SEPARADO -->
+<!-- FORMULÁRIO COM BOTÃO WHATSAPP -->
 <section class="slider-section" style="padding:40px 20px; text-align:center; background:#f8f8f8;">
   <div class="slider-container" style="flex-direction:column; align-items:center; gap:20px;">
 
-    <!-- Mensagem persuasiva -->
     <div class="gold-box" style="width:300px; min-height:auto;">
       <h2>Venha fazer parte!</h2>
-      <p>Leve a GOAT BEER para o seu bar, restaurante, adega ou distribuidor de bebidas.<br>
-      Temos total controle de estoque, atendemos todo o Brasil. Faça seu cadastro, conheça nossos produtos e venha saber mais!</p>
+      <p>Leve a GOAT BEER para o seu bar, restaurante, adega ou distribuidor. Preencha o formulário abaixo e depois entre em contato pelo WhatsApp para confirmar seu cadastro.</p>
     </div>
 
     <!-- Formulário -->
@@ -370,35 +368,21 @@ function denyAccess(){
       <button type="submit" style="padding:15px; border:none; border-radius:6px; background:#c9a227; color:black; font-weight:bold; cursor:pointer;">Enviar</button>
     </form>
 
-    <!-- Botão WhatsApp que só aparece após enviar -->
-    <button id="waButton" style="display:none; padding:15px; border:none; border-radius:6px; background:#25D366; color:white; font-weight:bold; cursor:pointer; margin-top:10px;">
-      Enviar para WhatsApp
-    </button>
+    <!-- Botão do WhatsApp -->
+    <a id="waLink" href="https://wa.me/message/D5W5BF64MGCOE1" target="_blank" 
+       style="display:none; margin-top:10px; padding:15px; border-radius:6px; background:#25D366; color:white; font-weight:bold; text-decoration:none;">
+       Enviar mensagem no WhatsApp
+    </a>
 
   </div>
 </section>
 
 <script>
-  // Mostra o botão WhatsApp após o envio do formulário
+  // Mostra o botão do WhatsApp ao clicar em "Enviar"
   document.getElementById("goatbeerForm").onsubmit = function(e){
       e.preventDefault(); // impede recarregar a página
-      document.getElementById("waButton").style.display = "block"; // mostra o botão
-  };
-
-  // Abre o WhatsApp com os dados preenchidos
-  document.getElementById("waButton").onclick = function(){
-      const form = document.getElementById("goatbeerForm");
-      const nome = form.nome.value;
-      const cpf = form.cpf_cnpj.value;
-      const endereco = form.endereco.value;
-      const email = form.email.value;
-      const telefone = form.telefone.value;
-
-      const mensagem = Olá! Quero fazer meu cadastro da GOAT BEER:\nNome: ${nome}\nCPF/CNPJ: ${cpf}\nEndereço: ${endereco}\nE-mail: ${email}\nTelefone: ${telefone};
-      const numero = "5542988433807"; // número do WhatsApp com DDI + DDD
-      const url = https://wa.me/${numero}?text=${encodeURIComponent(mensagem)};
-
-      window.open(url, "_blank"); // abre o WhatsApp em nova aba
+      document.getElementById("waLink").style.display = "block"; // mostra o botão
+      alert("Formulário preenchido! Clique no botão verde para enviar mensagem pelo WhatsApp se desejar.");
   };
 </script>
 </body>
