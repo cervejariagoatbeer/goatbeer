@@ -56,6 +56,7 @@ body{
     color:white;
 }
 
+/* BANNER */
 .banner{
     width:100%;
     height:100vh;
@@ -80,7 +81,7 @@ body{
 }
 
 .slide{
-    min-width:90%;
+    min-width:320px; /* tamanho das caixinhas móveis igual à fixa */
     scroll-snap-align:center;
     display:flex;
     flex-direction:column;
@@ -92,8 +93,8 @@ body{
     padding:20px;
     border-radius:10px;
     background:white;
-    width:300px;
-    min-height:200px;
+    width:320px;
+    min-height:180px; /* altura ajustada para caber texto */
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -101,12 +102,12 @@ body{
 
 .gold-box h2{
     color:#c9a227;
-    margin-bottom:15px;
+    margin-bottom:10px;
 }
 
 .gold-box p{
     font-size:14px;
-    line-height:1.4;
+    line-height:1.5;
 }
 
 .arrow{
@@ -125,19 +126,8 @@ body{
     margin-bottom:20px;
 }
 
-.fixed-box{
-    position:relative;
-    margin:40px auto 20px auto;
-    width:300px;
-    padding:20px;
-    border:2px solid #c9a227;
-    border-radius:10px;
-    background:white;
-    text-align:center;
-}
-
 .carousel-img{
-    width:140px;
+    width:180px; /* aumentei um pouco para deixar maior */
     height:auto;
     border-radius:8px;
 }
@@ -160,7 +150,7 @@ body{
 
 <!-- +18 VERIFICAÇÃO -->
 <div class="age-overlay" id="ageCheck">
-    <h1>GOAT BEER<br>Você tem 18 anos ou mais?</h1>
+    <h1>Você tem 18 anos ou mais?<br>Sim ou Não?</h1>
     <div>
         <button class="btn-yes" onclick="enterSite()">SIM</button>
         <button class="btn-no" onclick="denyAccess()">NÃO</button>
@@ -172,42 +162,42 @@ function enterSite(){
     document.getElementById("ageCheck").style.display="none";
 }
 function denyAccess(){
-    alert("Você precisa ter 18 anos ou mais para acessar.");
+    window.location.href="https://www.google.com";
 }
 </script>
 
 <!-- BANNER -->
 <div class="banner"></div>
 
-<!-- CAIXINHAS PRINCIPAIS -->
+<!-- CAIXINHAS MÓVEIS INICIAIS -->
 <section class="slider-section">
 <div class="slider-container">
 
 <div class="slide">
 <div class="gold-box">
-<h2>GOAT BEER</h2>
-<p>Cervejaria artesanal sediada em Joinville – SC.<br><br>Fundada em 2021 com um propósito claro: romper padrões e entregar autenticidade em cada detalhe.</p>
+<h2>UGB Cerveja Artesanal</h2>
+<p>Cervejaria sediada em Joinville desde 2021.<br>Laboratório próprio e processos patenteados.</p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Laboratório Próprio</h2>
-<p>Todos os nossos processos passam por controle rigoroso de qualidade em nosso laboratório próprio. Garantindo sabor, consistência e segurança em cada lote.</p>
+<h2>Produção e Qualidade</h2>
+<p>Capacidade de produção elevada com processos de alta tecnologia.<br>Todos os lotes são únicos e de altíssima qualidade.</p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Processos de Produção</h2>
-<p>Nossa linha de produção utiliza equipamentos de alta tecnologia, garantindo que todos os lotes sejam únicos, com capacidade de produzir milhares de litros por mês.</p>
+<h2>Pesquisa & Desenvolvimento</h2>
+<p>Desenvolvemos receitas exclusivas, combinando inovação e autenticidade em cada cerveja.</p>
 </div>
 </div>
 
 <div class="slide">
 <div class="gold-box">
-<h2>Patentes e Inovação</h2>
-<p>Nossas cervejas são autorais e patenteadas, com receitas exclusivas que destacam a inovação e sofisticação da GOAT BEER.</p>
+<h2>Compromisso e Excelência</h2>
+<p>Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br>Nossas matérias-primas são importadas e possuímos certificações rigorosas.<br>Prezamos pela qualidade e segurança em todo processo.</p>
 </div>
 </div>
 
@@ -215,10 +205,13 @@ function denyAccess(){
 <div class="arrow">← ARRASTE →</div>
 </section>
 
-<!-- CAIXINHA FIXA -->
-<div class="fixed-box">
-<p>Atuamos conforme todas as normas regulamentadoras, incluindo registro no MAPA.<br>Nossas matérias-primas são importadas.<br>Temos certificações rigorosas para atuar no mercado nacional e internacional. Prezamos pela qualidade.</p>
+<!-- CAIXINHA FIXA ABAIXO -->
+<section class="slider-section">
+<div class="gold-box" style="margin:0 auto; max-width:320px;">
+<h2>Excelência Técnica</h2>
+<p>Todos os nossos processos seguem padrões internacionais.<br>Equipamentos de alta tecnologia garantem controle rigoroso de qualidade.</p>
 </div>
+</section>
 
 <!-- CARROSSEL DE IMAGENS -->
 <section class="slider-section">
@@ -235,8 +228,60 @@ function denyAccess(){
 <div class="arrow">← ARRASTE →</div>
 </section>
 
-<!-- FUTURAS CERVEJAS (ex.: Rosa, Pilsen, IPA) -->
-<!-- Aqui você adiciona depois, seguindo o padrão de slides já criado -->
+<!-- CERVEJAS -->
+<section class="slider-section">
+<div class="slider-container">
+
+<div class="slide">
+<img src="cervejarosa.jpeg" class="beer-img">
+</div>
+
+<div class="slide">
+<div class="gold-box">
+<h2>ANN Pilsen</h2>
+<p>A icônica cerveja rosa da GOAT BEER.<br>Uma construção sensorial inédita que harmoniza cereja madura, morango fresco e pimenta rosa.</p>
+</div>
+</div>
+
+</div>
+<div class="arrow">← ARRASTE →</div>
+</section>
+
+<section class="slider-section">
+<div class="slider-container">
+
+<div class="slide">
+<img src="cervejapilsen.jpeg" class="beer-img">
+</div>
+
+<div class="slide">
+<div class="gold-box">
+<h2>GOAT BEER Pilsen</h2>
+<p>A Pilsen mais premiada e reconhecida da GOAT BEER.<br>Produzida com lúpulos norte-americanos selecionados e maltes especiais importados.</p>
+</div>
+</div>
+
+</div>
+<div class="arrow">← ARRASTE →</div>
+</section>
+
+<section class="slider-section">
+<div class="slider-container">
+
+<div class="slide">
+<img src="ipa.jpeg" class="beer-img">
+</div>
+
+<div class="slide">
+<div class="gold-box">
+<h2>GOAT BEER IPA</h2>
+<p>Intensidade, personalidade e presença marcante.<br>Lúpulos americanos de alto aroma como Citra e Mosaic, notas de frutas tropicais e cítricos frescos.</p>
+</div>
+</div>
+
+</div>
+<div class="arrow">← ARRASTE →</div>
+</section>
 
 </body>
 </html>
